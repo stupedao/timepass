@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Website</title>
+
+```
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: #0f172a;
+        color: white;
+        min-height: 100vh;
+    }
+
+    nav {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 8%;
+        background: #111827;
+        border-bottom: 1px solid #263244;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    nav a {
+        color: #cbd5e1;
+        text-decoration: none;
+        margin-left: 25px;
+        transition: 0.2s;
+    }
+
+    nav a:hover {
+        color: white;
+    }
+
+    .hero {
+        min-height: calc(100vh - 70px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .hero-content {
+        max-width: 700px;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+        margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+        color: #38bdf8;
+    }
+
+    .hero p {
+        font-size: 18px;
+        color: #94a3b8;
+        line-height: 1.7;
+        margin-bottom: 30px;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    button {
+        padding: 13px 25px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        transition: 0.2s;
+    }
+
+    .primary {
+        background: #38bdf8;
+        color: #0f172a;
+    }
+
+    .primary:hover {
+        background: #7dd3fc;
+        transform: translateY(-2px);
+    }
+
+    .secondary {
+        background: transparent;
+        color: white;
+        border: 1px solid #475569;
+    }
+
+    .secondary:hover {
+        background: #1e293b;
+    }
+
+    .status {
+        margin-top: 30px;
+        color: #22c55e;
+        display: none;
+        font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+        .hero h1 {
+            font-size: 40px;
+        }
+
+        nav {
+            padding: 0 5%;
+        }
+
+        nav .links {
+            display: none;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<nav>
+    <div class="logo">TestSite</div>
+
+    <div class="links">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to <span>TestSite</span></h1>
+
+        <p>
+            This is a simple modern HTML website made for testing.
+            You can modify the design, add pages, connect APIs,
+            or turn it into a real project.
+        </p>
+
+        <div class="buttons">
+            <button class="primary" onclick="testButton()">
+                Test Button
+            </button>
+
+            <button class="secondary" onclick="alert('Hello from TestSite!')">
+                Say Hello
+            </button>
+        </div>
+
+        <div class="status" id="status">
+            ✓ JavaScript is working!
+        </div>
+    </div>
+</section>
+
+<script>
+    function testButton() {
+        document.getElementById("status").style.display = "block";
+    }
+</script>
+```
+
+</body>
+</html>
